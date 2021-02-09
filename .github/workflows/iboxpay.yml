@@ -31,12 +31,12 @@ jobs:
         with:
           node-version: 12.x
       - name: npm install
-        if: env.XP_iboxpayHEADER
+        if: env.XP_refreshTOKEN
         run: |
           cd ~/JavaScript
           npm install
       - name: '运行 【笑谱】'
-        if: env.XP_iboxpayHEADER
+        if: env.XP_refreshTOKEN
         run: |
           cd ~/JavaScript
           node Task/iboxpay.js
